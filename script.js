@@ -21,6 +21,23 @@ document.addEventListener("DOMContentLoaded", () => {
     liff.logout();
     window.location.reload();
   });
+
+  // 發送訊息
+  document.getElementById("sendButton").addEventListener("click", () => {
+    liff
+      .sendMessages([
+        {
+          type: "text",
+          text: "這是一則來自 LIFF 應用的訊息！",
+        },
+      ])
+      .then(() => {
+        alert("訊息發送成功！");
+      })
+      .catch((err) => {
+        console.error("訊息發送失敗：", err);
+      });
+  });
 });
 
 function displayUserProfile() {
@@ -29,6 +46,7 @@ function displayUserProfile() {
     .then((profile) => {
       document.getElementById("loginButton").style.display = "none";
       document.getElementById("logoutButton").style.display = "block";
+      document.getElementById("sendButton").style.display = "block";
       document.getElementById("userProfile").style.display = "block";
       document.getElementById("userPicture").src = profile.pictureUrl;
       document.getElementById(
