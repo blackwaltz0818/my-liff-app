@@ -24,19 +24,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 發送訊息
   document.getElementById("sendButton").addEventListener("click", () => {
-    alert("發送訊息");
+    if (liff.isApiAvailable("chat_message.write")) {
+      console.log("chat_message.write 範圍已啟用");
+    } else {
+      console.error(
+        "chat_message.write 範圍未啟用，請檢查 LINE Developers Console 的設置"
+      );
+    }
     liff
       .sendMessages([
         {
           type: "text",
-          text: "這是一則來自 LIFF 應用的訊息！",
+          text: "這是一則測試訊息！",
         },
       ])
       .then(() => {
         alert("訊息發送成功！");
       })
       .catch((err) => {
-        alert("訊息發送失敗：", err);
         console.error("訊息發送失敗：", err);
       });
   });
