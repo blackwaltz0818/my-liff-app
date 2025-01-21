@@ -32,6 +32,10 @@ function displayUserProfile() {
       document.getElementById("userProfile").style.display = "block";
       document.getElementById("userPicture").src = profile.pictureUrl;
       document.getElementById(
+        "userId"
+      ).textContent = `userId: ${profile.userId}`;
+
+      document.getElementById(
         "userName"
       ).textContent = `Name: ${profile.displayName}`;
       document.getElementById("userStatus").textContent = `Status: ${
