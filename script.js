@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("訊息發送成功！");
       })
       .catch((err) => {
+        alert("訊息發送失敗：", err);
         console.error("訊息發送失敗：", err);
       });
   });
