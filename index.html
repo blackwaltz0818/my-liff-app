@@ -3,25 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LINE LIFF App</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>LIFF App</title>
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <style>
+      button {
+        margin: 10px;
+        padding: 10px;
+        font-size: 16px;
+      }
+    </style>
   </head>
   <body>
-    <div id="app">
-      <h1>Welcome to LINE LIFF App</h1>
-      <button id="loginButton">Login with LINE</button>
-      <button id="logoutButton" style="display: none">Logout</button>
+    <h1>Welcome to My LIFF App</h1>
 
-      <div id="userProfile" style="display: none">
-        <img id="userPicture" alt="User Profile Picture" />
-        <p id="userId"></p>
-        <p id="userName"></p>
-        <p id="userStatus"></p>
-      </div>
-
-      <button id="sendButton" style="display: none">發送訊息</button>
+    <div id="userProfile" style="display: none">
+      <img id="userPicture" alt="Profile Picture" width="100" />
+      <p id="userId"></p>
+      <p id="userName"></p>
+      <p id="userStatus"></p>
     </div>
-    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
-    <script src="script.js"></script>
+
+    <button id="loginButton" style="display: none">Login</button>
+    <button id="logoutButton" style="display: none">Logout</button>
+    <button id="sendButton" style="display: none">Send Message</button>
+
+    <script src="app.js"></script>
   </body>
 </html>
