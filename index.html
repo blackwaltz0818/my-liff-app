@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LINE LIFF App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Welcome to LINE LIFF App</h1>
+      <button id="loginButton">Login with LINE</button>
+      <button id="logoutButton" style="display: none">Logout</button>
+
+      <div id="userProfile" style="display: none">
+        <img id="userPicture" alt="User Profile Picture" />
+        <p id="userName"></p>
+        <p id="userStatus"></p>
+      </div>
+    </div>
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
