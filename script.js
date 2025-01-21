@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 發送訊息
   document.getElementById("sendButton").addEventListener("click", () => {
+    alert("發送訊息");
     liff
       .sendMessages([
         {
